@@ -34,12 +34,14 @@ function Point(x, y)
 
 Point.fromEvent = function(event)
 {
-    return new Point(event.pageX, event.pageY);
+    var item = (typeof TouchEvent !== "undefined" && event instanceof TouchEvent) ? event.targetTouches[0] : event;
+    return new Point(item.pageX, item.pageY);
 };
 
 Point.fromEventInElement = function(event, element)
 {
-    var wkPoint = window.webkitConvertPointFromPageToNode(element, new WebKitPoint(event.pageX, event.pageY));
+    var item = (typeof TouchEvent !== "undefined" && event instanceof TouchEvent) ? event.targetTouches[0] : event;
+    var wkPoint = window.webkitConvertPointFromPageToNode(element, new WebKitPoint(item.pageX, item.pageY));
     return new Point(wkPoint.x, wkPoint.y);
 };
 
