@@ -1,0 +1,17 @@
+{
+  "name": "geometry",
+  "repo": "graouts/geometry",
+  "description": "JavaScript geometry types: point, size, rectangle, etc.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+      "index.js",
+      "point.js",
+      "size.js",
+      "rect.js"
+  ]
+}
