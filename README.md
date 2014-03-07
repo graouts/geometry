@@ -28,6 +28,9 @@ var pagePoint = Point.fromEvent(event);
 
 // Create a Point from a MouseEvent with coordinates local to a given elememt.
 var localPoint = Point.fromEventInElement(event, event.target);
+
+// Get the distance between two points.
+var distance = point.distanceToPoint(anotherPoint);
 ```
 
 ### Size

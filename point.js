@@ -61,5 +61,10 @@ Point.prototype = {
     equals: function(anotherPoint)
     {
         return (this.x === anotherPoint.x && this.y === anotherPoint.y);
+    },
+
+    distanceToPoint: function(anotherPoint)
+    {
+        return Math.sqrt(Math.pow(this.x - anotherPoint.x, 2) + Math.pow(this.y - anotherPoint.y, 2));
     }
 };
