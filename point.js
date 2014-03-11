@@ -26,10 +26,11 @@
 
 module.exports = Point;
 
-function Point(x, y)
+function Point(x, y, z)
 {
     this.x = x || 0;
     this.y = y || 0;
+    this.z = z || 0;
 };
 
 Point.fromEvent = function(event)
@@ -50,21 +51,21 @@ Point.prototype = {
 
     toString : function()
     {
-        return "Point[" + this.x + ", " + this.y + "]";
+        return "Point[" + [this.x, this.y, this.z].join(", ") + "]";
     },
 
     copy: function()
     {
-        return new Point(this.x, this.y);
+        return new Point(this.x, this.y, this.z);
     },
 
     equals: function(anotherPoint)
     {
-        return (this.x === anotherPoint.x && this.y === anotherPoint.y);
+        return (this.x === anotherPoint.x && this.y === anotherPoint.y && this.z === anotherPoint.z);
     },
 
     distanceToPoint: function(anotherPoint)
     {
-        return Math.sqrt(Math.pow(this.x - anotherPoint.x, 2) + Math.pow(this.y - anotherPoint.y, 2));
+        return Math.sqrt(Math.pow(this.x - anotherPoint.x, 2) + Math.pow(this.y - anotherPoint.y, 2) + Math.pow(this.z - anotherPoint.z, 2));
     }
 };

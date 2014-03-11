@@ -20,7 +20,8 @@ var Point = require("geometry/point");
 var point = new Point(10, 10);
 point.x;                    // 10
 point.y;                    // 10
-point.toString();           // -> Point[10, 10]
+point.z;                    // no "z" coordinate was specified, defaults to 0.
+point.toString();           // -> Point[10, 10, 0]
 point.equals(point.copy())  // -> true
 
 // Create a Point from a MouseEvent using page coordinates.
