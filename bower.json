@@ -1,0 +1,9 @@
+{
+    "name": "geometry",
+    "main": "index.js",
+    "version": "0.0.1",
+    "homepage": "https://github.com/graouts/geometry",
+    "authors": ["Antoine Quint <antoine@graougraou.com>"],
+    "description": "JavaScript geometry types: point, size, rectangle, etc.",
+    "license": "MIT"
+}
